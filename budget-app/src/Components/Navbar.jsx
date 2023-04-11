@@ -16,6 +16,7 @@ export const Navbar = () => {
   const logoutHandler = () => {
     dispatch(logout())
     window.localStorage.removeItem('token')
+    window.localStorage.removeItem("expenses");
     navigate('/login')
     toast("You have successfully logged out!");
   }
