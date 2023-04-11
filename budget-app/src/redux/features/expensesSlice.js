@@ -24,7 +24,7 @@ export const expensesSlice = createSlice({
       state.budget = action.payload;
     },
     clearExpenses: (state) => {
-      state.expenses(0, state.length);
+      state.expenses = [];
     },
   },
 });

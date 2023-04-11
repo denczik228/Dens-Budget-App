@@ -31,7 +31,7 @@ export const LoginPage = () => {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
-      className="h-60 mx-auto mt-48 min-w-[25%] w-96"
+      className="h-60 mx-auto mt-24 min-w-[25%] w-96"
     >
       <h1 className="text-lg text-white text-center">Authorization</h1>
       <label className="text-xs text-gray-400">
