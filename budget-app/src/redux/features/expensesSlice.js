@@ -23,8 +23,11 @@ export const expensesSlice = createSlice({
     updateBudget: (state, action) => {
       state.budget = action.payload;
     },
+    clearExpenses: (state) => {
+      state.expenses(0, state.length);
+    },
   },
 });
 
-export const { setExpenses, addExpenses, deleteExpenses, updateBudget } = expensesSlice.actions;
+export const { setExpenses, addExpenses, deleteExpenses, updateBudget, clearExpenses } = expensesSlice.actions;
 export default expensesSlice.reducer;

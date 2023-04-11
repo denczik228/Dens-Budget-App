@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { checkIsAuth, logout } from '../redux/features/authSlice';
 import { toast } from 'react-toastify'
+import { clearExpenses } from '../redux/features/expensesSlice';
  
 export const Navbar = () => {
   const isAuth = useSelector(checkIsAuth);
@@ -16,6 +17,7 @@ export const Navbar = () => {
   const logoutHandler = () => {
     dispatch(logout())
     window.localStorage.removeItem('token')
+    dispatch(clearExpenses())
     window.localStorage.removeItem("expenses");
     navigate('/login')
     toast("You have successfully logged out!");
